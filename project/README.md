@@ -4,6 +4,8 @@
 
 This course has a large team project that starts immediately after Exam 1. You should start thinking about it now and considering who to add to your team.
 
+The team project is 50% of your semester grade.
+
 This project attempts to simulate the software development process a small team might follow to produce a software solution for a client (me). The project has seven graded components, one of which is graded by your teammates. The entire project is 50% of your semester grade (300 of 600 total points).
 
 - [Team Selection](#team-selection)<br/>
@@ -38,7 +40,9 @@ This project attempts to simulate the software development process a small team 
 
 ### This Document
 
-*I am not trying to trick you anywhere in this document.* If something is missing, incorrect, or unclear, ask a question. If the document needs updating, I will fix it. I update this document every semester, so occasionally, I miss something, and the instructions are not quite aligned with the current semester. I apologize in advance for any mistakes or clarity issues.
+*I am not trying to trick you anywhere in this document.* If something is missing, incorrect, or unclear, ask a question. If the document needs a correction or clarification, I will fix it. 
+
+I update this document every semester... occasionally I miss something and the instructions are not quite aligned with the current semester. I apologize in advance for any mistakes, omissions, or clarity issues.
 
 Always ask your Subject Matter Expert, Technical Lead, etc., when you are unclear. Stating "I did not understand" *after* the deadline is unacceptable. It is your responsibility to understand the project.
 
@@ -46,17 +50,127 @@ Always ask your Subject Matter Expert, Technical Lead, etc., when you are unclea
 
 ## What Will You Make?
 
-Your customer (me) wants a shopping cart/sales system that meets very specific architectural requirements. 
+Your customer (me) wants a web-based shopping cart/sales system that meets very specific architectural requirements. 
 
-The system will manage no less than three related data tables:
+The system will manage no less than four related data tables... following are some basic examples to help you understand the domain (these are *not* complete, so do not copy this later on...):
 - Inventory<br/>
-   Each item in this table will be unique (you will not choose a quantity). Items have at least one related image, plus a description, and price. Each item has a unique ID that will never repeat. If you want to show multiple images, you must add another table to your design.
+   Each item in this table will be unique (you will not choose a quantity). Items have at least one related image, plus a description, and price. Each item has a unique ID that will never repeat. If you want to show multiple images, you must add another table to your design. For example:
+
+   ```json
+   [
+   	{
+       "ItemId": 1,
+       "Name": "Boomerang",
+       "Gender": "Male",
+       "Breed": "Corgi Mix",
+       "Description": "Boomerang is a friendly puppy who needs a home!",
+       "PhotoUrl": "https://unsplash.com/photos/short-coated-brown-and-white-puppy-eoqnr8ikwFE"
+       "AdoptionFee": 90.25
+     }, 
+     	{
+       "ItemId": 2,
+       "Name": "Pineapple",
+       "Gender": "Female",
+       "Breed": "King Charles Cavalier",
+       "Description": "Pineapple is a friendly puppy who needs a home!",
+         "PhotoUrl": "https://unsplash.com/photos/white-and-brown-long-coated-small-dog-wearing-pink-dress-P0A7SMIE8Cc",
+       "AdoptionFee": 125.50
+     },
+     {
+       "ItemId": 3,
+       "Name": "Posey",
+       "Gender": "Female",
+       "Breed": "Alligator",
+       "Description": "Posey looks menacing, but she is really just a cuddly sweetheart who wants to sleep in your child's bed!",
+         "PhotoUrl": "https://unsplash.com/photos/crocodile-farm-kbmfkohn_7E",
+       "AdoptionFee": 25.00
+     }
+   ]
+   ```
+
+   
+
 - Users<br/>
    Users have a unique username and a role that sets their access level. Each user has a unique ID that will never repeat.
    - Customer: Can browse inventory and purchase items. Customers can self-register (create their own account).
-   - Administrator: In addition to all Customer rights (except self-registration), Administrators can create, update, and remove inventory, plus run a sales report showing all sales.
+   - Administrator: In addition to all Customer rights (except self-registration), Administrators can create, update, and remove *unsold* inventory, and run a sales report showing all sales.
+
+   For example:
+
+   ```json
+   [
+     {
+       "UserId": 1,
+       "Username": "jeff",
+       "FirstName": "Jeff",
+       "LastName": "Adkisson",
+       "Password": "pancakes!",
+       "IsAdministrator": true,
+       "Address": {
+         "Street": "666 Cheesecake Lane",
+         "City": "Atlanta",
+         "State": "GA",
+         "Zip": "30015",
+         "Phone": "8675309"
+       }
+     },
+     {
+       "UserId": 2,
+       "Username": "max",
+       "FirstName": "Max",
+       "Adkisson": "Steele",
+       "Password": "unhack-1ble-pw",
+       "IsAdministrator": false,
+       "Address": {
+         "Street": "1313 Mockingbird Lane",
+         "City": "Marietta",
+         "State": "GA",
+         "Zip": "30005",
+         "Phone": "3142718"
+       }
+     }
+   ]
+   ```
+   
+   
+   
 - Sales<br/>
-   A sale record relates an inventory item to a user. A sale record also includes the date/time the item was sold and payment details such as sales tax, shipping fees, and the total. Once an inventory item is related to a sales record, it is no longer available for purchase. Each sale record has a unique ID that will never repeat.
+   A sale record groups the items a user purchased. A sale record also includes the date/time the item was sold and payment details such as sales tax, shipping fees, and the total. Once an inventory item is related to a sales record, it is no longer available for purchase. Each sale record has a unique ID that will never repeat.
+
+   For example:
+
+   ```json
+   [
+     {
+       "SalesId": 19,
+       "PurchasedByUserId": 2,
+       "AdoptionDate": "2025-02-03 15:13:53",
+       "SubTotal": 215.75,
+       "Tax": 10.79,
+       "Shipping": 0.00,
+       "Total": 321.29
+     }
+   ]
+   ```
+
+- Sales Inventory Item
+
+   A Sales Inventory Item is related to a Sales record. A Sales record must have 1 or more related Sales Inventory Items. A Sales Inventory Item represents the intersection of a Sale and one Inventory item. When an Inventory Item is related to a Sale, it is no longer available for further sale.
+
+   For example:
+
+   ```json
+   [
+     {
+       "SalesId": 19,
+       "ItemId": 1
+     },
+     {
+       "SalesId": 19,
+       "ItemId": 2
+     }
+   ]
+   ```
 
 Your team will decide what industry/product to target. You will pick something that sells *unique* items, similar to Etsy or a pet rescue. In other words, you will not create inventory items with a quantity greater than 1, so pick something that sells unique goods. Once an inventory item is in the Sales table, it is "sold" and no longer available for sale. Some ideas you might consider are:
 
@@ -84,7 +198,7 @@ This project covers many disciplines and you will use a variety of tools. Fortun
 2. A Team Name<br/>
    Completely unnecessary, but you cannot have a team without a name. Pick something you like - it does not have to be boring.
 3. A free Github account<br/>
-   You will check in some of your submissions and all of your presentations to a team Github account. Your team can either create a dedicated Github account or choose one team member to house the team's work in their  account.
+   You will check in your project work to a GitHub repository. Your team can either create a dedicated Github account or choose one team member to house the team's work in their  account. If you are unfamiliar with source control, you will get familiar with it this semester. It is an essential software engineering skill. You should also consider trying a git client for handling cloning and checkins, such as Github Desktop or the free version of GitKraken (my personal favorite).
 4. An IDE for development<br/>
    
    I recommend getting a JetBrains education license (free) using using a JetBrains IDE. JetBrains has IDEs for every major language and operating system. You can use something else for development, but I recommend these, particularly if you have never used a professional-grade tool. JetBrains IDEs work on Windows, MacOS, and Linux. Do not use a text editor such as Notepad. Learn how to use an IDE including the built-in debugger.
@@ -231,14 +345,13 @@ After Requirements Elicitation, each team will decide and report to me the follo
 
 - What language you will use to build your system
    Your choices are limited to Java, C#, and Python.
-- What framework
 - What web framework you will use to create the screens for your system
-   Your choices here will be constrained by the language your team chooses:
+   You can choose from:
    - C# - Blazor Server or ASP MVC (dotnet core 8 or 9, Blazor Server or ASP MVC)
       *If you are unsure what to choose, I recommend selecting C# and Blazor Server. Many teams have done outstanding projects with these selections over the years.*
    - Python - Flask (python 3.9, Flask 3.1)
    - Java - Spring (Java 23, Maven using https://start.spring.io/)
-      *Generally students find this more challenging than the C# and Python choices, even if they learned some Java in FYE. It is powerful, but a bit unforgiving.*
+      *Generally, students find this more challenging than the C# and Python choices, even if they learned some Java in FYE. It is powerful, but a bit unforgiving. Java web development takes a bit more effort to properly setup.*
 
 Some things to consider when choosing:
 
@@ -249,7 +362,9 @@ Some things to consider when choosing:
 
 If you are thinking "I want to use *some other thing*", the answer is no. These are your choices. Often (in a real job or client engagement) your team lead or client will tell you what language and frameworks you must use and you have to learn them. They might want you to use something their other teams already know and support. 
 
-**IMPORTANT NOTE:** Start thinking about *how* your system will retrieve and store data. Your choices include JSON, SQLite, and CSV. Your data must be written storage - it will not only live in memory - and be available after restarting the application. You do not have to select this mechanism until [Technical Design](#technical-design), but you need to start thinking about it and doing some research. Many of the frameworks I listed include libraries to help with this requirement. I always give an *optional* JSON lecture for those of you who want to use this valuable technique. If you choose SQL, you must use SQLite](https://www.sqlite.org/index.html) that does not require a server installation. I do *not* recommend using CSV for storage... I have seen *very few* successful projects that use CSV over the years.
+**IMPORTANT NOTE:** Start thinking about *how* your system will retrieve and store data. Your choices include JSON, SQLite, and CSV. Your data must be written storage - it will not only live in memory - and be available after restarting the application. You do not have to select this mechanism until [Technical Design](#technical-design), but you need to start thinking about it and doing some research. Many of the frameworks I listed include libraries to help with this requirement. I always give an *optional* JSON lecture for those of you who want to use this valuable technique. If you choose SQL, you *must* use SQLite](https://www.sqlite.org/index.html). 
+
+Note that I do *not* recommend using CSV for storage... I have seen *very few* successful projects that use CSV over the years. I allow it because some FYE instructors cover the format, but it typically is quite awful (plus JSON or SQL are far better for projects like this).
 
 #### Technology Description
 
@@ -392,6 +507,10 @@ I will be using the GitHub repo link in the project spreadsheet to reach your te
 
 Each team will send Jeff a YouTrack account. Email me at JAdkiss1@Kennesaw.edu. I need this so I can review your YouTrack Gantt chart.
 
+### Example Markdown `README.md` From a Prior Semester
+
+![image-20250203173443030](README.assets/image-20250203173443030.png)
+
 ### Why Is The Project Plan Only 5% of the Grade?
 
 1. This is your first submission and I will grade it rigorously. You will see my expectations without losing a lot of points on the project. I expect excellent spelling and grammar, well-organized work, and a polished presentation. Over and over I will stress that you need to perform as if you were being paid by a customer to do this work - not just getting a grade in a core class.
@@ -436,7 +555,7 @@ The new application must do a few things very well. There are some other things 
 
 Users must be able to self-register (create their own account) and login. I also must have a more powerful "admin" user type that can login and run sales reports. Obviously admins cannot self register. All users must have a unique username and 6-character (minimum) password. To make an admin, someone who is already an admin needs to be able to transform a previously registered user into an admin. It would be great if there was a simple user interface to do that, but I need some process regardless if a user interface is too much work for Version 1.
 
-After a user logs in (or registers), the user must see a list of all available inventory sorted by highest price to lowest price. This is the "main" screen. They cannot see anything that is already sold. The inventory must have a short name, picture, price, and brief description, plus a button to add the item to a shopping cart. Obviously the user can add multiple items to the cart. All items must have at least one picture. I'd love it if we could do multiple pictures, but I heard that might be hard in this first release, so I can live with that in the future if necessary.
+After a user logs in (or registers), the user must see a list of all *available* inventory sorted by highest price to lowest price. This is the "main" screen. They cannot see anything that is already sold. The inventory must have a short name, picture, price, and brief description, plus a button to add the item to a shopping cart. Obviously the user can add multiple items to the cart. All items must have at least one picture. I'd love it if we could do multiple pictures, but I heard that might be hard in this first release, so I can live with that in the future if necessary.
 
 The user should also be able to search the inventory by typing in a search box. The system will try to match the words in the box to either the item's name or description.
 
@@ -464,6 +583,7 @@ When a user decides to pay, they must click a Checkout button to start the payme
 8.  To complete the transaction, the user can click Complete Order. This will take the items out of inventory and show the user's receipt. The user can also back up to the Checkout page or return to the main page. If they do not complete the order, leave whatever they have in the cart in case they check out later.
 9.  Once the user clicks Complete Order, you must show a receipt. It looks a lot like the Confirm Order page, but also must include the last four digits of the user's credit card number and their shipping address.
 10.  I also want receipts to be automatically emailed to the user, so whatever you show on the screen I'd also like that emailed to the user for their records.
+     *Note: Your "email" is just displaying your customer's receipt in the browser. You do not have to actually send an email (unless you want to - get a free SendGrid account if you want to send emails).*
 11.  Finally, the user will click OK to exit the receipt. Note that the user cannot return to the cart or payment area at this point because the cart is empty.
 12.  When the user returns to the main page, the inventory the user just bought must be gone - they cannot see it in the list or in the search page. At this point, whatever the user bought must be visible in the sales report.
 
@@ -475,7 +595,7 @@ Administrators have a few more "powers".
 2.  An administrator needs to be able to export the sales report to CSV. This will let the admin analyze the data better in something like Excel.
 3.  Finally, administrators must have some way to add inventory into the system. How will they add new inventory to the database? They need some approach. I would love it if they could open a page and enter the information (and choose a picture) and it gets added to the database. If that is too hard, they could just enter it into the database manually. Initially something or the store will be empty. My admins are not overly technical, but they could enter the information into a file or database screen if you show them how and write down the steps. 
 
-One last thing... I'm really worried how all of this is going to look, so I must have a high-fidelity mockup created of the screens and application flow before coding starts. I want to see how it's going to look when you finish it. I cannot really envision how things look when people just hand me a bunch of requirements, so I need you to show me what I can expect what it is all done.
+One last thing... I'm really worried how all of this is going to look, so I *must* have a high-fidelity mockup created of the screens and application flow before coding starts. I want to see how it's going to look when you finish it. I cannot really envision how things look when people just hand me a bunch of requirements, so I need you to show me what I can expect what it is all done.
 
 ### Requirements Writing
 
@@ -686,9 +806,9 @@ Finally, do not push this part of the project onto the "creative" person in the 
 
 In the past I have seen teams (both academic teams and in my professional capacity) assign ownership of this part of the project to a female team member because "females are more creative" or "females are more more empathetic".
 
-*Do not fall into this trap.* It is a gender stereotype. There is a societal generalization that females are usually better at interface design, color, layout, and creative work. *Whether that is true or not,* do not assign work based on gender stereotypes.
+*Do not fall into this trap.* It is a gender stereotype. There is a societal generalization that females are usually better at interface design, color, layout, and creative work. *Whether that is true or not,* do not assign work based on gender stereotypes. Assign work based on expertise, interest, and availability - not on some stereotype.
 
-Engineering remains male-dominated in part due to generalizations like this one. This is obviously unfair to female team members, often forcing females into roles defined by gender stereotypes as opposed to training, ability, and interest. 
+Engineering remains male-dominated in part due to generalizations like this one. This is obviously unfair to female team members, often forcing females into roles defined by gender stereotypes as opposed to training, expertise, and interest. 
 
 ### Instructions and Grading Rubric
 
@@ -707,10 +827,10 @@ At this point, you have spent significant time thinking about and working on you
 Your Technical Design will include:
 
 - **Implementation Language(s) including *why* you selected it**
-   *For example, if you are using Grails, your languages are Groovy and HTML. JavaFX is not a language - it's a framework that uses Java. As always, write using bullets, lists, and tables... avoid huge paragraphs. Include links to your language's documentation, useful tutorials, etc. Your goal here is to help a developer understand why you choose the language and quickly learn more about it.*
+   *For example, if you are using Flask, your languages are Python and HTML. Flask is not a language - it's a framework that uses Python. As always, write using bullets, lists, and tables... avoid huge paragraphs. Include links to your language's documentation, useful tutorials, etc. Your goal here is to help a developer understand why you choose the language and quickly learn more about it.*
 
 - **Implementation Frameworks including *why* selected them**
-   *For example, if you are using Grails, the framework is Grails. You might also use a CSS framework such as Bootstrap. JavaFX is a framework. Blazor is a framework that uses the C# language. Include useful links to documentation for your framework(s). You goal here is to help a developer understand your architecture and quickly learn more about it. Links to tutorials and videos are quite useful as well. As always, write using bullets, lists, and tables... avoid huge paragraphs.*
+   *For example, if you are using Java, the framework is Spring Boot. You might also use a CSS framework such as Bootstrap. Blazor is a framework that uses the C# language. Include useful links to documentation for your framework(s). You goal here is to help a developer understand your architecture and quickly learn more about it. Links to tutorials and videos are quite useful as well. As always, write using bullets, lists, and tables... avoid huge paragraphs.*
 
 - **Entity Relationship Diagram, Entity/Field Descriptions and Data Examples**<br/>
    *All of the data your system manages and how each data type is related will be visually depicted here. Your ERD design is not an academic effort - this should match what you actually plan to implement - so plan carefully keeping in mind the data your user interface design demonstrated the application will display/manage.*
@@ -731,7 +851,7 @@ Your Technical Design will include:
    ![image-20231107090505665](README.assets/image-20231107090505665.png)
 
 - **Data Storage Plan**<br/>
-   How will your application store data? Your choices are CSV, JSON, and SQL. Describe the libraries and technologies you will use to store data. For example, if you are using C#, you might use Dapper or Entity Framework for data access to write to an embedded SQLite database. If you are using Java, you might use a JDBC driver to access a Postgres database. Write this as a series of steps or bullet points. Avoid large long dull paragraphs.
+   How will your application store data? Your choices are CSV (not recommended!), JSON, and SQL. Describe the libraries and technologies you will use to store data. For example, if you are using C#, you might use Dapper or Entity Framework for data access to write to an embedded SQLite database. If you are using Java, you might use a JDBC driver to access your SQLite database. Write this as a series of steps or bullet points. Avoid large long dull paragraphs.
    *Remember that the data you change/add **must remain available the next time you start the application** - this is a class project, but it needs to operate like a real application - starting fresh every time you launch the application is not realistic. Therefore, you must have persistent data storage - not just memory storage. As always, write using bullets, lists, and tables... avoid huge paragraphs.*
 
 - [**Coding Style Guide**](https://www.cs.cornell.edu/courses/JavaAndDS/JavaStyle.html)<br/>
@@ -749,9 +869,9 @@ Your Technical Design will include:
 
    ![image-20231107091446319](README.assets/image-20231107091446319.png)
 
-### Your Technical Design Audience is a Developer
+### Your Technical Design Audience is another Engineer
 
-The audience for your Technical Design is a developer - not your client (me). For the purpose of this project, assume that the developer is an outsourced engineer that speaks English, but is in another country and timezone. Also assume that remote developer is me (surprise!). Therefore, your Technical Design must answer a lot of questions effectively and with high precision to avoid midnight phone calls and long meetings answering questions that should have been covered in your Technical Design. Ask yourself if your outsourced developer can execute your design based on what you have written? If not, then you need to revise your Technical Design. 
+The audience for your Technical Design is a software engineer - not your client (me). For the purpose of this project, assume that the software engineer is an outsourced engineer that speaks English, but is in another country and timezone. Also assume that remote developer is me (surprise!). Therefore, your Technical Design must answer a lot of questions effectively and with high precision to avoid midnight phone calls and long meetings answering questions that should have been covered in your Technical Design. Ask yourself if your outsourced developer can execute your design based on what you have written? If not, then you need to revise your Technical Design. 
 
 After your Technical Design is complete and posted to your team GitHub repo, you will produce yet another 5 minute video presentation going over the Technical Design. In this case, your audience is your remote developer (who happens to be me). Therefore, you need to introduce the material, call out what is important, describe areas of high risk, etc. Remember that the developer can read, so just reading the document to the developer is a waste of time... give the developer some perspective and try to focus on high priority features and high risk areas of concern.
 
@@ -774,10 +894,10 @@ Now you will execute the requirements by implementing your User Interface Design
 You will submit your implementation to your client (me) via Github. It will include:
 
 - well-written code that follows your language's style guide. Do not use Java conventions in a Python app.
-- a readme.md in the source that includes:
+- a README.md in the source that includes:
    - a brief description of your application (from an end-user point of view),
    - environment requirements, such as "MacOS or Linux or Windows" (be very specific the systems and operating systems where you application can run),
-   - steps to clone and build the application on a fresh machine. Be very specific - I will be attempting to follow these steps on my machine and they better have all of the steps, dependencies, gotchas, database schema scripts, warnings, etc. I need to get your application working without a lot of fuss.
+   - steps to clone and build the application on a fresh machine. Be very specific - I will be attempting to follow these steps on my machin. You must describe all of the steps, dependencies, gotchas, database schema scripts, warnings, etc. I need to get your application working without a lot of fuss. If I cannot make your application work, your grade will suffer. Be very thorough on this part and have every person on your team test the steps to ensure everyone agrees it is complete.
    - any other important information you need to pass along to someone trying to setup and run your application.
 
 There are many good articles on writing an excellent read.me. [I recommend reviewing a few so you do a great job producing this very important document.](https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project)
@@ -786,15 +906,9 @@ I cannot stress how important is that your code compiles and runs. The whole poi
 
 Pro Tip: I recommend that every team member review your implementation's readme.md file and try to configure your implementation in a fresh directory. This will help you see steps you have overlooked. I think great work makes it easy on the end-user to get started quickly without having endlessly Google and troubleshoot to try out your work.
 
-### Optional Implementation Presentation
+### Optional Setup Presentation
 
-I recommend producing a 5 minute presentation and checking it in along with your implementation. Your presentation will demonstrate the process to setup and execute the application. I want to see it compile and run, then perform a purchase as a user. Next, stop the application, then start it again and run the sales report, thus demonstrating that sale performed in the first run was persisted to data storage. Finally, show the record you wrote to data storage (so open the CSV or JSON file or run a SQL query).
-
-If you have time, show the project structure and call out anything awesome you did or techniques you embraced such as dependency injection. I will also find it interesting if you show how you separated UI concerns from your services and data storage code. I love talking about code, so entertain me if you have time in your 5 minute presentation.
-
-This presentation *proves* that your application works and your source code compiles. That is critical because it is possible I might not be able to make your source code work on my machine, particularly if you have a complex setup (which I recommend avoiding, but that is your decision).
-
-This presentation is *optional*, so if you are confident I can get your application operational without any problem, you do not need to produce it. The optional implementation presentation does *not* replace the final presentation (which is presented to the entire group and compares your working application to your Marvel UI design),
+If you are concerned I will have trouble running your application on my machine, create a 3-5 minute presentation showing exactly how to set it up and run it. If you are confident I am going to have no problem following your directions, you do not need to produce this video. If you produce this video, it does *not* replace your final presentation video and it does not confer any extra credit. It is simply to ensure I can get your application operational.
 
 ### JetBrains Professional IDEs
 
@@ -863,7 +977,7 @@ Each student will receive the average of what was awarded by their teammates and
 
 You do not have to provide a reason for your scores and I certainly will not pass a reason along if you do give me one. Scores are therefore anonymous in that regard.
 
-If you get less than top scores from your teammates, please ask yourself what you could have done to contribute more, to better support the project.
+If you get less than top scores from your teammates, please ask yourself what you could have done to contribute more, to better support the project and your teammates.
 
 Here is some guidance you might consider:
 
