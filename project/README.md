@@ -17,7 +17,7 @@ This project attempts to simulate the software development process a small team 
    Due Wed Mar 19
 - [User Interface Design](#user-interface-design)<br/>
    30 points, 10% of total<br/>*Submitted via GitHub with Loom video*<br/>
-   Due Wed Mar 31
+   Due Mon Mar 31
 - [Technical Design](#technical-design)<br/>
    30 points, 10% of total<br/>*Submitted via GitHub with Loom video*<br/>
    Due Wed April 16
@@ -86,7 +86,8 @@ This project covers many disciplines and you will use a variety of tools. Fortun
 3. A free Github account<br/>
    You will check in some of your submissions and all of your presentations to a team Github account. Your team can either create a dedicated Github account or choose one team member to house the team's work in their  account.
 4. An IDE for development<br/>
-   I will provide everyone a full JetBrains license. They have IDEs for every major language and operating system. You can use something else for development, but I recommend these, particularly if you have never used a professional-grade tool. JetBrains IDEs work on Windows, MacOS, and Linux.
+   
+   I recommend getting a JetBrains education license (free) using using a JetBrains IDE. JetBrains has IDEs for every major language and operating system. You can use something else for development, but I recommend these, particularly if you have never used a professional-grade tool. JetBrains IDEs work on Windows, MacOS, and Linux. Do not use a text editor such as Notepad. Learn how to use an IDE including the built-in debugger.
 5. A free YouTrack account<br/>Your project plan will use YouTrack's excellent [Gantt Chart creator](https://www.jetbrains.com/youtrack/features/gantt_chart.html). YouTrack is free for up to teams of 10. Each team needs one YouTrack account for making your project plan. https://www.jetbrains.com/youtrack/
 6. A free Marvel account<br/>
    Your UI design will be made in Marvel, a friendly high-fidelity design tool. https://marvelapp.com/signup
@@ -406,7 +407,7 @@ Each team will send Jeff a YouTrack account. Email me at JAdkiss1@Kennesaw.edu. 
 
 `10%, 30 of 300 points`
 
-`Due Tues, Oct  24, 2023`
+`Due Wed, March 19, 2025`
 
 This component has five sections:
 
@@ -567,10 +568,6 @@ After your requirements are complete and available in your team Github repo as a
 
 Once again, the presentation is to simulate convincing your client that you are on the path to success, that you have carefully considered and are working to managing risk, and that your project is organized and carefully planned. I should feel happy and confident after watching your presentation that your team understands the project, is not missing anything and furthermore, is not adding anything that will increase the risk of failure. Like before, carefully plan your presentation and make it professional quality.
 
-### Writing Center Bonus
-
-Do not forget that you can get up to two extra points on your final grade visiting the Writing Center (1 visit = 1 point, 2 visits = 2 points). If you go, show them this document.
-
 ### Instructions and Grading Rubric
 
 [Requirements Instructions and Grading Rubric](details-requirements.md)
@@ -581,7 +578,7 @@ Do not forget that you can get up to two extra points on your final grade visiti
 
 `10%, 30 of 300 points`
 
-`Due Friday, Nov 10, 2023 before 11:59 PM`
+`Due Monday March 31`
 
 In this component, you will combine your knowledge of the project, the requirements, and your technology choice's UI capabilities to produce a [high-fidelity iteractive mockup](https://www.uxpin.com/studio/blog/high-fidelity-prototyping-low-fidelity-difference) of your application using the free edition of [Marvel](https://marvelapp.com).
 
@@ -703,7 +700,7 @@ Engineering remains male-dominated in part due to generalizations like this one.
 
 `10% = 30 of 300 points`
 
-`Due Sun, Nov 19, 2023`
+`Due Wed, April 16, 2025`
 
 At this point, you have spent significant time thinking about and working on your project. You should have very good ideas how to implement your system. Now that you have this knowledge and insight, you will produce a technical design detailing how you will build the most critical pieces of the system.
 
@@ -760,10 +757,6 @@ After your Technical Design is complete and posted to your team GitHub repo, you
 
 As always, your work will be written in Markdown and posted to your team project in your shared GitHub repo. Your work must be well-organized, linked off your main README.md file, professionally produced, accurate, and exhibit excellent grammar and spelling.
 
-### Writing Center Bonus
-
-Do not forget that you can get up to two extra points on your final grade visiting the Writing Center (1 visit = 1 point, 2 visits = 2 points).
-
 ### Instructions and Grading Rubric
 
 [Technical Design Instructions and Grading Rubric](details-technical-design.md)
@@ -772,7 +765,7 @@ Do not forget that you can get up to two extra points on your final grade visiti
 
 `35% = 105 of 300 points`
 
-`Due Thurs, Nov 30, 2023 - Post implementation Github, post link in D2L assignment folder`
+`Due Mon April 28`
 
 Finally, you are ready to produce your application! You have planned most of the semester and you know exactly what to make.
 
@@ -805,7 +798,7 @@ This presentation is *optional*, so if you are confident I can get your applicat
 
 ### JetBrains Professional IDEs
 
-I will provide everyone with a full license to all JetBrains products. You can also get them free yourself with your KSU ID. I tell students this every semester and they still do not try these excellent products, so perhaps since I already procured the license you will give these a try. Note that I get nothing in return from JetBrains. I am just tired of developers not insisting on using the best tools for the job, so hopefully you will explore a few and find out what is best for your work.
+I recommend that you get a JetBrains education license and try their products. These are professional-grade cross-platform IDEs that work with almost every popular language.
 
 Many developers go to great lengths to get VS Code or BB Edit or Textmate or "insert name of free thing here" to do what they need and that is fine, but you should also learn whether the productivity tools from companies like JetBrains will make your work go faster, find bugs faster, and produce better code.
 
@@ -815,7 +808,7 @@ PRO TIP: I routinely ask people I am considering hiring "what tools do you like 
 
 PRO TIP 2: I will not hire an experienced engineer who says they do not care what tools they use. To me, that shows a lack of craftsmanship and passion for your art. Further, I will escort you out of the building and push you into the street if you say you use Windows Notepad to write your code. Windows Notepad sucks.
 
-PRO TIP 3: I love mechanical keyboards. Not really a tip, but we are talking about important tools here. If you haven't tried one, you might be missing out on a very sublime experience. 
+PRO TIP 3: You would not hire a carpenter who has no tools. Sometimes, you have to pay for good tools. For whatever reason, some software engineers will not usething that is not free. That's workable but not always pragmatic. Licensed software, particularly when reasonably priced, is an outstanding investment. Note that Visual Studio is not reasonably priced IMO, which is why I recommend trying JetBrains Rider if you are doing C# development.
 
 ### Instructions and Grading Rubric
 
@@ -827,7 +820,7 @@ PRO TIP 3: I love mechanical keyboards. Not really a tip, but we are talking abo
 
 `20% = 60 of 300 points`
 
-`Due Thurs, Nov 30, 2023 - Post presentation in Github, post link in D2L assignment folder`
+`Due Mon April 28`
 
 This is the end. You are done! The holidays are almost here and this course has an OPTIONAL final exam!
 
@@ -860,7 +853,7 @@ Presentation order will be randomly selected (except late teams, which must pres
 
 `10% = 30 of 300 points`
 
-`Due Tues, Dec 5, 2023 - Submit via D2L - Do NOT post in Github`
+`Due Mon April 28 - DO NOT POST IN GITHUB - Post in D2L Folder`
 
 Hopefully you have an outstanding team experience during this project. If not, hopefully you learned something about how challenging working in a team can be and how important it is to have the right people on the team with you.
 
