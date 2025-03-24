@@ -588,7 +588,7 @@ When a user decides to pay, they must click a Checkout button to start the payme
 9.  Once the user clicks Complete Order, you must show a receipt. It looks a lot like the Confirm Order page, but also must include the last four digits of the user's credit card number and their shipping address.
 10.  I also want receipts to be automatically emailed to the user, so whatever you show on the screen I'd also like that emailed to the user for their records.
      *Note: Your "email" is just displaying your customer's receipt in the browser. You do not have to actually send an email (unless you want to - get a free SendGrid account if you want to send emails).*
-11.  Finally, the user will click OK to exit the receipt. Note that the user cannot return to the cart or payment area at this point because the cart is empty.
+11.  Finally, the user will click OK to exit the receipt. Note that the user cannot return to the checkout at this point because the cart is empty.
 12.  When the user returns to the main page, the inventory the user just bought must be gone - they cannot see it in the list or in the search page. At this point, whatever the user bought must be visible in the sales report.
 
 That sums up the user purchase experience.
