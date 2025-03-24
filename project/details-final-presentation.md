@@ -30,8 +30,8 @@ You have worked hard to get here. Show off your work and be proud of what you ac
 Your submission must include:
 
 - a link to your team's final presentation video. This video must show you starting and running your application, plus a side-by-side comparison of your completed application to your Marvel prototype along with an explanation of any discrepancy's between design and implementation.
-
-If necessary, you can submit two Loom videos - one for the running application and one doing the comparison of your application to Marvel. Label everything clearly so it is easy for me to find and review your submission.
+- If necessary, you can submit two Loom videos - one for the running application and one doing the comparison of your application to Marvel. Label everything clearly so it is easy for me to find and review your submission.
+- Your team's video presentation links must be visible off of your team's main README.md in a Final Presentation section.
 
 ### Grading Rubric
 

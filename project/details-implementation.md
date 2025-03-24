@@ -33,7 +33,7 @@ Our number one goal as Software Engineers is to deliver working software. All of
 Your submission must include:
 
 - working source in your /source directory.
-- links to documentation how to prepare the environment, compile, and execute the project.
+- links to documentation how to prepare the environment, compile, and execute the project off of your repo's main README.md.
 - troubleshooting suggestions (if you have any). Remember - I must be able to run your project, so give your team the best chance of success by documenting known issues configuring and running your application.
 
 ### Grading Rubric
