@@ -21,7 +21,7 @@ This project attempts to simulate the software development process a small team 
    Due Wed Mar 5
 - [Requirements](#requirements)<br/>
    30 points, 10% of total<br/>*Submitted via GitHub with Loom video*
-   Due Wed Mar 28
+   Due Fri Mar 28
 - [User Interface Design](#user-interface-design)<br/>
    30 points, 10% of total<br/>*Submitted via GitHub with Loom video*<br/>
    Due Mon Apr 7
