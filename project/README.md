@@ -606,7 +606,7 @@ One last thing... I'm really worried how all of this is going to look, so I *mus
 The project is multiple versions, but we are only implementing Version 1. You will write the requirements for *all versions* and organize your material like this:
 
 -  Version #
-   -  Milestone (from your Project Plan - say "Future" when version is greater than 1)
+   -  Milestone (say "Future" when version is greater than 1)
       *Make sure your milestones are properly ordered.*
       -  Epic Name and unique ID (write these like a use case bubble - very brief, but specific enough to be clear what we are doing)
          I suggest something like T (for team) and # and E and a number for your epic id. For example, T9E-2.
