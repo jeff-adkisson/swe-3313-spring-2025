@@ -32,9 +32,7 @@ The entire team will work execute the requirements EFFORT. *All of you need* to 
 
 Requirements are critical to the success of your project. Be very careful here and strive for accuracy and outstanding communication technique.
 
-Once your work is complete, ***every* team member will do the following:** post a link to your team's Github repo in the Requirements assignment in D2L before 11:59PM on Thursday, October 26, 2023.
-
-If you forget to post your link in D2L, you will receive a late submission penalty (see syllabus). Do not rely on your teammates for this. Everyone must submit the link themselves (it's connected to the gradebook).
+Once your work is complete, add a section called Requirements to your project's main README.md file that links to your requirements, diagrams, etc.
 
 ### Grading Rubric
 

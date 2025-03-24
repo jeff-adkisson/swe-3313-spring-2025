@@ -1,6 +1,8 @@
 # SWE 3313 Spring 2025 Project
 
-`Revised Feb 3, 2025`
+`Revised Mar 24, 2025`
+
+## Project Overview
 
 This course has a large team project that starts immediately after Exam 1. You should start thinking about it now and considering who to add to your team.
 
@@ -11,18 +13,21 @@ This project attempts to simulate the software development process a small team 
 - [Team Selection](#team-selection)<br/>
   Not graded<br/>Due Wed Feb 12
   *Anyone not on a team by Wed Feb will be randomly assigned a team. There will be 7 teams of 4 and 1 team of 3 based on current class enrollment.*
+  
+  **Signup Sheet**
+  https://docs.google.com/spreadsheets/d/1JLcnNRv2tydWXsNqBA9HR45NrC8d8V5oblN5siYydAI/edit?usp=sharing
 - [Project Plan](#project-plan)<br/>
    15 points, 5% of total<br/>*Submitted via GitHub with Loom video*<br/>
    Due Wed Mar 5
 - [Requirements](#requirements)<br/>
    30 points, 10% of total<br/>*Submitted via GitHub with Loom video*
-   Due Wed Mar 19
+   Due Wed Mar 28
 - [User Interface Design](#user-interface-design)<br/>
    30 points, 10% of total<br/>*Submitted via GitHub with Loom video*<br/>
-   Due Mon Mar 31
+   Due Mon Apr 7
 - [Technical Design](#technical-design)<br/>
    30 points, 10% of total<br/>*Submitted via GitHub with Loom video*<br/>
-   Due Wed April 16
+   Due Fri April 18
 - [Implementation](#implementation)<br/>
    105 points, 35% of total<br/>*Submitted via GitHub with Loom video*<br/>
    Due Mon April 28 (with Final Presentation and Peer Evaluation)
@@ -281,18 +286,19 @@ No matter what you do, make sure this is never a popularity contest. Keep this a
 
 ## Team Selection
 
-`Complete team selection by Wed Feb 12 2025`
-*Anyone not on a team by Wed Feb 12 will be randomly assigned to a team.* 
+*Anyone not on a team by the deadline will be randomly assigned to a team.* 
 
-`Complete technology selection by October 12, 2023 (same day Project Plan is due)`
-
-As of February 3, there are 35 students in this course. Therefore, there will be 7 teams of 4 and 1 team of 3. The single team with 3 students will get a bit more flexibility in grading (but not deadlines) since they have 25% less brainpower to complete the project (also remember that fewer teammates can be good since it's less to coordinate - I personally do not think a smaller team is any disadvantage).
+This course contains up to 40 students. All teams will contain 4 students unless the course has an irregular count (40 % 4 != 0). In that case, there will either be one or two teams of 3 as well.
 
 If a teammate drops after midterm, your team will remain the same. It's unusual (though it has happened) that more than 1 teammate drops at midterm. We will handle these cases if and when they occur.
 
+Teams of 3 do not receive any grading leniency. There are fewer people to coordinate (often the teams of 3 do better as a result). 
+
+If there is a team of 2 due to a student on a team of 3 dropping the course, I will discuss with the remaining team members on how to complete the project.
+
 #### Team Signup Sheet 
 
-https://docs.google.com/spreadsheets/d/1JLcnNRv2tydWXsNqBA9HR45NrC8d8V5oblN5siYydAI/edit?usp=sharing
+The link is posted in the [Project Overview](#project-overview) in the Team Selection section.
 
 #### Choosing Teammates
 
@@ -526,8 +532,6 @@ Each team will send Jeff a YouTrack account. Email me at JAdkiss1@Kennesaw.edu. 
 
 `10%, 30 of 300 points`
 
-`Due Wed, March 19, 2025`
-
 This component has five sections:
 
 - Requirements Analysis and Elicitation
@@ -698,8 +702,6 @@ Once again, the presentation is to simulate convincing your client that you are 
 
 `10%, 30 of 300 points`
 
-`Due Monday March 31`
-
 In this component, you will combine your knowledge of the project, the requirements, and your technology choice's UI capabilities to produce a [high-fidelity iteractive mockup](https://www.uxpin.com/studio/blog/high-fidelity-prototyping-low-fidelity-difference) of your application using the free edition of [Marvel](https://marvelapp.com).
 
 In this component, you are designing how users will move through your application. After reviewing your mockup, your client (me) will have a good understanding how each screen will look and how each screen relates to one another.
@@ -819,8 +821,6 @@ Engineering remains male-dominated in part due to generalizations like this one.
 ## Technical Design
 
 `10% = 30 of 300 points`
-
-`Due Wed, April 16, 2025`
 
 At this point, you have spent significant time thinking about and working on your project. You should have very good ideas how to implement your system. Now that you have this knowledge and insight, you will produce a technical design detailing how you will build the most critical pieces of the system.
 
@@ -967,7 +967,7 @@ Presentation order will be randomly selected (except late teams, which must pres
 
 `10% = 30 of 300 points`
 
-`Due Mon April 28 - DO NOT POST IN GITHUB - Post in D2L Folder`
+`DO NOT POST IN GITHUB - Post in D2L Folder`
 
 Hopefully you have an outstanding team experience during this project. If not, hopefully you learned something about how challenging working in a team can be and how important it is to have the right people on the team with you.
 

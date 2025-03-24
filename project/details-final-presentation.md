@@ -27,9 +27,11 @@ The entire team will work execute the final presentation EFFORT. *All of you nee
 
 You have worked hard to get here. Show off your work and be proud of what you accomplished. Put some real effort and polish into your presentation to get your client excited about what you produced.
 
-Once your work is complete, ***every* team member will do the following:** post a link to your team's Github repo in the Final Presentation assignment in D2L before 4:59PM on the deadline. Note that this deadline is one minute before the first presentation day - not at midnight like you might be accustomed.
+Your submission must include:
 
-If you forget to post your link in D2L, you will receive a late submission penalty (see syllabus). Do not rely on your teammates for this. Everyone must submit the link themselves (it's connected to the gradebook).
+- a link to your team's final presentation video. This video must show you starting and running your application, plus a side-by-side comparison of your completed application to your Marvel prototype along with an explanation of any discrepancy's between design and implementation.
+
+If necessary, you can submit two Loom videos - one for the running application and one doing the comparison of your application to Marvel. Label everything clearly so it is easy for me to find and review your submission.
 
 ### Grading Rubric
 

@@ -37,9 +37,7 @@ The entire team will work execute the user interface design EFFORT. *All of you 
 
 User interface design is critical to the success of your project. Be very careful here and strive for accuracy and outstanding communication technique.
 
-Once your work is complete, ***every* team member will do the following:** post a link to your team's Github repo in the User Interface Design assignment in D2L before 11:59PM on Friday, November 10, 2023.
-
-If you forget to post your link in D2L, you will receive a late submission penalty (see syllabus). Do not rely on your teammates for this. Everyone must submit the link themselves (it's connected to the gradebook).
+Once your work is complete, add a section called User Interface Design to your project's main README.md file that links to your Marvel project.
 
 ### Grading Rubric
 

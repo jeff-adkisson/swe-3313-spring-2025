@@ -30,9 +30,11 @@ The entire team will work execute the implementation EFFORT. *All of you need* t
 
 Our number one goal as Software Engineers is to deliver working software. All of the documentation, planning, and design were steps to reach a working implementation. This is the part that matters most. It also has the biggest contribution to your grade.
 
-Once your work is complete, ***every* team member will do the following:** post a link to your team's Github repo in the Implementation assignment in D2L before 4:59PM on the deadline. Note that this deadline is one minute before the first presentation day - not at midnight like you might be accustomed.
+Your submission must include:
 
-If you forget to post your link in D2L, you will receive a late submission penalty (see syllabus). Do not rely on your teammates for this. Everyone must submit the link themselves (it's connected to the gradebook).
+- working source in your /source directory.
+- links to documentation how to prepare the environment, compile, and execute the project.
+- troubleshooting suggestions (if you have any). Remember - I must be able to run your project, so give your team the best chance of success by documenting known issues configuring and running your application.
 
 ### Grading Rubric
 
