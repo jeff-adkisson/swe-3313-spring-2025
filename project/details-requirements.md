@@ -4,12 +4,12 @@
 
 To start writing the requirements, [you must read the notes from your customer](README.md#customer-notes-for-requirements-elicitation). From there you can start to put your requirements and priorities into a rough form. Then you will perform requirements elicitation in person with your customer to ensure you have a clear idea what is expected and what priority to assign each requirement.
 
-After you have a rough list, you will divide the requirements into versions, milestones, epics and related stories.
+After you have a rough list, you will divide the requirements into versions, epics and related stories.
 
 Here are your deliverables in this phase:
 
 1.  [Requirements Introduction](README.md#requirements-introduction) in your repo's main README.md file and links to requirements, use case diagram, decision diagram, and presentation. This is integrated into the documentation you produced for the Project Plan so everything can be found (but is not contained) from a single point.
-2.  [Requirements](README.md#requirements-writing) organized into versions, milestones, epics and stories.
+2.  [Requirements](README.md#requirements-writing) organized into versions, epics and stories.
     Note that the version you implementing by the end of the semester is Version 1. Version 2, etc. will contain the requirements you decide are *not* "must-have" requirements. So hint, hint, it sounds like Version 1 is limited to Must Have requirements.
 3.  One [Use Case Diagram](README.md#use-case-diagram) showing the major functionality of the application and all relevant actors for all versions (not just Version 1).
 4.  One [Decision Table](README.md#decision-table) showing the rules and actions a user can take if logging in as a user or administrator for all versions (not just Version 1).
@@ -39,7 +39,7 @@ Once your work is complete, add a section called Requirements to your project's 
 #### Component Percentages
 
 1.  Introduction to Requirements and links to requirements and diagrams and presentation - 5%
-3.  Requirements organized into versions (there is more than one!), milestones, epics and stories - 50%
+3.  Requirements organized into versions (there is more than one!), epics and stories - 50%
 4.  One use case diagram - 12.5%
 5.  One decision table - 12.5%
 6.  3-5 minute video presentation describing your plan, technology selection and team assignments (Github) - 20%
