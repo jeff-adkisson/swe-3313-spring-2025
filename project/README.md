@@ -883,8 +883,6 @@ As always, your work will be written in Markdown and posted to your team project
 
 `35% = 105 of 300 points`
 
-`Due Mon April 28`
-
 Finally, you are ready to produce your application! You have planned most of the semester and you know exactly what to make.
 
 Now you will execute the requirements by implementing your User Interface Design and Technical Design. Your goal is to make your implementation look as close to the User Interface Design as possible.
@@ -931,8 +929,6 @@ PRO TIP 3: You would not hire a carpenter who has no tools. Sometimes, you have 
 ## Final Presentation
 
 `20% = 60 of 300 points`
-
-`Due Mon April 28`
 
 This is the end. You are done! The holidays are almost here and this course has an OPTIONAL final exam!
 
