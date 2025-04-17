@@ -115,3 +115,47 @@ Anyone not participating in the project may be removed from the team and have to
 
 [< Back to Project Overview](README.md#technical-design)
 
+```mermaid
+erDiagram
+    ParticipantAssessmentRevision {
+        int ParticipantAssessmentRevisionId PK
+    }
+    JoyndParticipantAssessmentRevision {
+        int JoyndParticipantAssessmentRevisionId PK
+        int ParticipantAssessmentRevisionId FK
+        bool IsDisabled-NEW
+        DateTime WasDisabledOn-NEW
+        string IsDisabledReason-NEW
+        int_ JoyndDeduplicationTimespanId-NEW FK
+    }
+    JoyndDeduplicationTimespan {
+        int JoyndDeduplicationTimespanId PK
+        int ParticipantAssessmentRevisionId FK
+        int JoyndAssessmentId FK
+        DateTime CreatedOn
+        DateTime ExpiresOn
+    }
+    JoyndAssessment {
+        int JoyndAssessmentId PK
+        bool IsDeDepPolicyActive
+        int DaysBeforeNewParAsmtRevInstanceDeDupPolicy
+        bool DisablePriorOrdersDeDupPolicy
+        bool ResendInvitationDeDupPolicy
+        bool ResetReminderScheduleDeDupPolicy
+        int SendResultsDelayMinutesOnReorderDeDupPolicy
+    }
+
+    ParticipantAssessmentRevision || -- o| JoyndParticipantAssessmentRevision 
+    : "has 0 or 1"
+    
+    ParticipantAssessmentRevision || -- o| JoyndDeduplicationTimespan 
+    : "has 0 or 1"
+
+    JoyndDeduplicationTimespan || -- |{ JoyndParticipantAssessmentRevision 
+    : "has 1 or more"
+
+    JoyndAssessment || -- o{ JoyndDeduplicationTimespan 
+    : "has 0 to many"
+
+```
+
