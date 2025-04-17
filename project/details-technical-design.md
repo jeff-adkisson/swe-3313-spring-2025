@@ -115,47 +115,5 @@ Anyone not participating in the project may be removed from the team and have to
 
 [< Back to Project Overview](README.md#technical-design)
 
-```mermaid
-erDiagram
-    ParticipantAssessmentRevision {
-        int ParticipantAssessmentRevisionId PK
-    }
-    JoyndParticipantAssessmentRevision {
-        int JoyndParticipantAssessmentRevisionId PK
-        int ParticipantAssessmentRevisionId FK
-        bool IsDisabled-NEW
-        DateTime WasDisabledOn-NEW
-        string IsDisabledReason-NEW
-        int_ JoyndDeduplicationTimespanId-NEW FK
-    }
-    JoyndDeduplicationTimespan {
-        int JoyndDeduplicationTimespanId PK
-        int ParticipantAssessmentRevisionId FK
-        int JoyndAssessmentId FK
-        DateTime CreatedOn
-        DateTime ExpiresOn
-    }
-    JoyndAssessment {
-        int JoyndAssessmentId PK
-        bool IsDeDepPolicyActive
-        int DaysBeforeNewParAsmtRevInstanceDeDupPolicy
-        bool DisablePriorOrdersDeDupPolicy
-        bool ResendInvitationDeDupPolicy
-        bool ResetReminderScheduleDeDupPolicy
-        int SendResultsDelayMinutesOnReorderDeDupPolicy
-    }
-
-    ParticipantAssessmentRevision || -- o| JoyndParticipantAssessmentRevision 
-    : "has 0 or 1"
-    
-    ParticipantAssessmentRevision || -- o| JoyndDeduplicationTimespan 
-    : "has 0 or 1"
-
-    JoyndDeduplicationTimespan || -- |{ JoyndParticipantAssessmentRevision 
-    : "has 1 or more"
-
-    JoyndAssessment || -- o{ JoyndDeduplicationTimespan 
-    : "has 0 to many"
-
-```
+![ERD](https://img.plantuml.biz/plantuml/svg/fLHBQy904BxdLonU2WMXNaL4sxHWIwjeeUSrcJO3czsmiz46xN_lRBG-qbGZpIKayprcljbaG4vQbwSg240xT8MOy3D6c4djXaH0b79X2WiaD5gi0i7NzKdGA1PTWTg9Nc_orEy7NpljHrFek971UMJLnTFQxVBMbFVmmnjHY2Jd2dnjRemgtxx9tUknva8e7RnY2XNA52GPNoTdKN-KrRBz4E8yKnX9nxQUIDnHrRuIJYtdA9HpglyEetJPG-iWTnOuYvfKxZypj437XSg8U-cZkMeTgyDmwX12DZ4SG36C72xWS6EXBEWMtes55rZou4DA_QWZpQTSHymCyortux0XRVOuiMZisCPWwHYtKvy2WOv7Ue6k3Fy4Z5rJrAmrYnBUbu8_i3CMP7ok79igMJoZpftFRmh6j_AxOmxpYYrKsG4bc95Oeaj496sCMYfq21IS_iRMwtRRh9jyZLtHIYI96s6iwBGkaAq_nnMv4qYljLvTq6B7QwQy-QtimIah-rerwiiPaKfTj89Wm9lXt-8t)
 
