@@ -942,14 +942,9 @@ Your 5 minute final presentation will include:
 2) A comparison of your final application's user interface and your Marvel UI design. Explain why or why not your implementation met your design and what you learned from that. In real life, when your mockup does not match your final implementation, your client may be upset... it's like an architect designing a soaring skyscraper and the builder delivers a large tent. If your final work does not match your design, own it and learn from it. 
 3) Anything awesome you want to show off.
 
-After the entire class views your final presentation, your client (me) will ask you some questions. Your team must be present - everyone must participate.
+Make sure your Final Presentatation is linked off of your team GitHub repository somewhere I can quickly find it.
 
-We will use two lecture periods for final presentations. Each presentation and Q&A session will take about 10-12 minutes. Attendance is mandatory for all students for both presentation days.
-
-Presentation order will be randomly selected (except late teams, which must present on Dec 5).
-
-- Presentations 1-5 on Thurs Nov 30
-- Presentations 6-10 on Tues Dec 5
+Before submitting, everyone in the team should review the video, the link, etc. This is a team project - everyone is responsible for the work. If I cannot find the video, you will receive a late penalty, so do not make this hard on your instructor or your grade.
 
 ### Instructions and Grading Rubric
 
