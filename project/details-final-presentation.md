@@ -17,9 +17,7 @@ Your presentation can be checked into GitHub as an MP4 or posted to a public lin
 
 You will also:
 
-1) Create a link to your final presentation in your team's GitHub repo project documentation. Make sure the link is easily found and organized into your prior work.
-2) Answer questions about your implementation after we present your video to the entire group. Every team member must participate.
-3) Be present for both days of presentations. Attendance will be taken on presentation days.
+- Create a link to your final presentation in your team's GitHub repo project documentation. Make sure the link is easily found and organized into your prior work.
 
 ### Submission Steps
 
@@ -37,24 +35,14 @@ Your submission must include:
 
 #### Component Percentages
 
-1.  Final Presentation - 90%
-2.  Attendance Both Presentation Days - 10%, *be present both days or 0%*
+1.  Final Presentation showing running application and comparing UI design to implemented (running, actual) UI - 100%
 
-#### Final Presentation (90% of total)
+#### Final Presentation (100% of total)
 
 -  90 to 100%: meets all requirements, well-recorded, well organized, and highly professional. Polished work gets the top grade.
 -  80% to 89%: meets all requirements, may have some recording or organizational issues.
 -  70% to 79%: meets most requirements, may have some recording or organizational issues.
 -  69% or below: does not meet most requirements or is very poorly recorded.
-
-*Note: Presentations posted to Github will not be graded.* 
-
-#### Attendance Both Days (10% of total)
-
--  100% - Attended both days
--  0% - Attended one or zero days.
-
-*Attendance can be excused with documentation. See syllabus.*
 
 ### Academic Honesty
 
